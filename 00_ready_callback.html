@@ -1,6 +1,6 @@
 <!--
  * @Date: 2022-10-22 10:52:25
- * @LastEditTime: 2022-10-23 17:10:41
+ * @LastEditTime: 2022-10-23 17:28:27
  * @Description: 
 -->
 <!DOCTYPE html>
@@ -25,12 +25,17 @@
 
     //  1.同步回调函数
     const arr = [1,2,5]
-    arr.forEach(item => {  //遍历回调，同步回调函数
+    arr.forEach(item => {  //遍历回调，同步回调函数,不会放入队列，一上来就执行完
       console.log(item);
     })
     console.log('forEach()之后');
 
     // 2.异步回调函数
+    setTimeout(()=>{ //异步回调函数，会放入队列中将来执行
+      console.log('timeout callback()');
+    },0)
+    console.log('settimeout()之后');
+
   </script>
 </body>
 </html>
