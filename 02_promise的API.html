@@ -1,0 +1,43 @@
+<!--
+ * @Date: 2022-11-09 22:06:31
+ * @LastEditTime: 2022-11-09 23:07:37
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /**
+     * 1.Promise构造函数：Promise(excutor){}
+     *  excutor函数：同步执行 (resolve,reject) => {}
+     *  resolve函数：内部定义成功时我们调用的函数 value => {}
+     *  reject函数：内部定义失败时我们调用的函数 reason => {}
+     *  说明：excutor函数会在Promise内部立即同步回调，异步操作在执行器中执行
+     * 
+     * 2.Promise.prototype.then方法：(onResolved,onRejected) => {}
+     *  onResolved函数：成功的回调函数 (value) => {}
+     *  onRejected函数：失败的回调函数 (reason) => {}
+     *  说明：指定用于得到成功value的成功回调和用于得到失败reason的失败回调
+     *       返回一个新的promise对象
+     * 
+     * 3.Promise.prototype.catch方法：(onRejected) => {}
+     *  onRejected函数：失败的回调函数(reason) => {}
+     *  说明：then()的语法糖，相当于then(undefined,onRejected)
+     * 
+     * 4.Promise.resolve方法：(value) => {}
+     *  value：成功的数据或promise对象
+     *  说明：返回一个成功/失败的promise对象
+     * 
+     * 5.Promise.reject方法：(reason) => {}
+     *  reason:失败的原因
+     *  说明：返回一个失败的promise对象
+     * */
+  </script>
+</body>
+</html>
