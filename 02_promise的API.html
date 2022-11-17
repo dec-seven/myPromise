@@ -1,6 +1,6 @@
 <!--
  * @Date: 2022-11-09 22:06:31
- * @LastEditTime: 2022-11-09 23:07:37
+ * @LastEditTime: 2022-11-17 20:52:28
  * @Description: 
 -->
 <!DOCTYPE html>
@@ -37,7 +37,40 @@
      * 5.Promise.reject方法：(reason) => {}
      *  reason:失败的原因
      *  说明：返回一个失败的promise对象
+     * 
+     * 6.Promise.all方法：(promises) => {}
+     *  promises：包含n个Promise的数组
+     *  说明：返回一个新的promise，只有所有的promise都成功才成功，只要有一个失败了就直接失败
+     * 
+     * 7.Promise.race方法：(promises) => {}
+     *  promises：包含n个promise的数组
+     *  说明：返回一个新的promise，第一个完成的promise的结果状态就是最终结果状态
+     * 
      * */
+
+
+    new Promise((resolve,reject)=>{
+      // 传执行器函数
+      
+      // 执行异步任务
+      setTimeout(()=>{
+        resolve('成功的数据')
+        reject('失败的数据')
+      },1000)
+    }).then(
+      value => {
+        console.log('onResolved()1',value);
+      }
+    ).catch(
+      (reason) => {
+        console.log('onRejected()1',reason);
+      }
+    )
+
+    const p1 = new Promise((resolve,reject)=>{
+      resolve(1)
+    })
+    console.log(p1);
   </script>
 </body>
 </html>
